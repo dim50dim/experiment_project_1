@@ -5,7 +5,7 @@ import FileUploader from './components/FileUploader';
 
 function App() {
 const [parsedDate, setParsedData] = useState([]);
-
+  const [selectedExperiments, setSelectedExperiments] = useState([]);
   return (
     <>
          <FileUploader onDataParsed={setParsedData}/>
