@@ -8,7 +8,7 @@ const [parsedDate, setParsedData] = useState([]);
 
   return (
     <>
-         <FileUploader/>
+         <FileUploader onDataParsed={setParsedData}/>
     </>
   )
 }
