@@ -10,7 +10,10 @@ const [parsedDate, setParsedData] = useState([]);
   const experimentIds = [...new Set(parsedDate.map(item => item.experiment_id))];
   return (
     <>
-         <FileUploader onDataParsed={setParsedData}/>
+    <Container>
+ <FileUploader onDataParsed={setParsedData}/>
+    </Container>
+        
     </>
   )
 }
