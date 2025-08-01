@@ -1,6 +1,6 @@
 import React from 'react'
 import { Autocomplete,TextField } from '@mui/material'
-const ExperimentSelector = () => {
+const ExperimentSelector = ({experiments, selected,onChange}) => {
   return (
     <div>
       
