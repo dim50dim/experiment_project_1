@@ -4,14 +4,25 @@ import './App.css'
 import FileUploader from './components/FileUploader';
 
 function App() {
-const [parsedDate, setParsedData] = useState([]);
+const [parsedData, setParsedData] = useState([]);
   const [selectedExperiments, setSelectedExperiments] = useState([]);
 
-  const experimentIds = [...new Set(parsedDate.map(item => item.experiment_id))];
+  const experimentIds = [...new Set(parsedData.map(item => item.experiment_id))];
   return (
     <>
     <Container>
- <FileUploader onDataParsed={setParsedData}/>
+  <Typography variant="h4" gutterBottom>MLOps Experiment Tracker</Typography>
+      <FileUploader onDataParsed={setParsedData} />
+      {experimentIds.length > 0 && (
+        <ExperimentSelector
+          experiments={experimentIds}
+          selected={selectedExperiments}
+          onChange={setSelectedExperiments}
+        />
+      )}
+      {selectedExperiments.length > 0 && (
+        <MetricChart data={parsedData} selectedExperiments={selectedExperiments} />
+      )}
     </Container>
         
     </>
