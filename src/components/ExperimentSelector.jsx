@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Autocomplete,TextField } from '@mui/material'
 const ExperimentSelector = ({experiments, selected,onChange}) => {
   return (
@@ -7,6 +7,7 @@ const ExperimentSelector = ({experiments, selected,onChange}) => {
         multiple options={experiments}
         value={selected}
         onChange={(event,newValue) => onChange(newValue)}
+          renderInput={(params) => <TextField {...params} label="Select Experiments" />}
       />
     </div>
   )
