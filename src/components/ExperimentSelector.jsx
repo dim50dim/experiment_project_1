@@ -3,7 +3,11 @@ import { Autocomplete,TextField } from '@mui/material'
 const ExperimentSelector = ({experiments, selected,onChange}) => {
   return (
     <div>
-      <Autocomplete />
+      <Autocomplete
+        multiple options={experiments}
+        value={selected}
+        onChange={(event,newValue) => onChange(newValue)}
+      />
     </div>
   )
 }
