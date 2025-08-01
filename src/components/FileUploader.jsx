@@ -1,5 +1,6 @@
 import React from 'react'
 import Papa from 'papaparse';
+import { Button } from '@mui/material';
 const FileUploader = ({onDataParsed}) => {
     const handleFileChange = (event) => {
           const file = event.target.files[0];
@@ -17,7 +18,9 @@ const FileUploader = ({onDataParsed}) => {
     }
   return (
     <div>
-      
+        <Button>
+            
+        </Button>
     </div>
   )
 }
