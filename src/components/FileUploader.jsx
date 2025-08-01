@@ -18,8 +18,9 @@ const FileUploader = ({onDataParsed}) => {
     }
   return (
     <div>
-        <Button>
-            
+        <Button variant='contained' component="label">
+         Upload  CSV 
+         <input type="file" hidden accept='.csv' onChange={handleFileChange} />
         </Button>
     </div>
   )
