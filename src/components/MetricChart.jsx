@@ -5,7 +5,7 @@ import {
   Title, Tooltip, Legend, CategoryScale
 } from 'chart.js';
 
-
+ChartJS.register(LineElement, PointElement, LinearScale, Title, Tooltip, Legend, CategoryScale);
 const MetricChart = ({data,selectedExperiments}) => {
       const metrics = [...new Set(data.map(d => d.metric_name))];
 
